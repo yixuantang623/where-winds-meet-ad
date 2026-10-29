@@ -121,7 +121,7 @@
   width: 100%;
   max-width: none;
   position: absolute;
-  inset: auto 0% -25% -2%;
+  inset: auto 0% -25% 0%;
 }
 
 .img_fire {
