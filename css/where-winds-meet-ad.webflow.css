@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .ad_wrapper_link {
   background-image: url('../images/KV_background.webp');
   background-position: 50%;
