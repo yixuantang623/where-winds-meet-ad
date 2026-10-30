@@ -77,37 +77,20 @@ document.addEventListener("DOMContentLoaded", function () {
 //   document.body.style.overflowX = "auto";
 //   document.body.style.overflowY = "auto";
 // });
+
 document.addEventListener("DOMContentLoaded", function () {
   const wrapper = document.querySelector(".ad_wrapper_link");
   if (!wrapper) return;
-
-  const root = document.documentElement;
-  const body = document.body;
-
-  root.style.margin = "0";
-  body.style.margin = "0";
-  root.style.padding = "0";
-  body.style.padding = "0";
 
   wrapper.style.setProperty("width", "100%", "important");
   wrapper.style.setProperty("min-width", "1000px", "important");
   wrapper.style.setProperty("height", "100dvh", "important");
   wrapper.style.setProperty("min-height", "600px", "important");
 
-  function updateOverflow() {
-    const overflowX = window.innerWidth < 1000 ? "auto" : "hidden";
-    const overflowY = window.innerHeight < 600 ? "auto" : "hidden";
+  document.documentElement.style.setProperty("overflow", "hidden", "important");
+  document.body.style.setProperty("overflow", "hidden", "important");
+});
 
-    root.style.setProperty("overflow-x", overflowX, "important");
-    root.style.setProperty("overflow-y", overflowY, "important");
-
-    body.style.setProperty("overflow-x", overflowX, "important");
-    body.style.setProperty("overflow-y", overflowY, "important");
-  }
-
-  updateOverflow();
-  window.addEventListener("resize", updateOverflow);
-});		
 </script>
   </div>
   <div class="ad_wrapper_link"><img src="images/KV_roles.webp" loading="eager" alt="" class="img_roles"><img src="images/KV_front.webp" loading="eager" alt="" class="img_front"><img src="images/KV_fire.webp" loading="eager" alt="" class="img_fire">
